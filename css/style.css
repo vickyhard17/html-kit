@@ -1,0 +1,357 @@
+body{margin:0;padding:0;background:#fff;}
+
+*{padding:0;margin:0;}
+
+ul,li,p{margin:0;padding:0;}
+/*wrapper start here*/
+.wrapper {margin:0 auto;width:1200px;background:#fff;z-index:9000;}
+/*header icons start here*/
+.main-header {width:1100px;margin:0 auto;padding:15px 0;overflow:hidden;}
+
+.headerleft-icon  li img {width:20px;height:20px;}
+
+/*.iconsleft{overflow:hidden;}*/
+
+.headerleft-icon  li{list-style:none;padding:0 20px;}
+
+.headerleft-icon .list1{float:left;cursor:pointer;}
+
+ .headerleft-icon li:hover{background:black;color:white;}
+
+.headerleft-icon .list1 span{font-size:12px;margin:0 20px;}
+
+.headerright-icon  li img {width:20px;height:20px;}
+
+/*.iconsright{overflow:hidden;}*/
+
+.iconsleft,iconsright{float:left;}
+
+.headerright-icon  li{list-style:none;padding:0 20px;}
+
+.headerright-icon  li:hover{background:black;color:white}
+
+.headerright-icon  a{color:black;cursor:pointer;text-decoration:none;}
+
+.headerright-icon  a:hover{background:black;color:white;}
+
+.headerright-icon{float:right;}
+
+.headerright-icon .list2{float:left;cursor:pointer;}
+
+.headerright-icon .list2 span{margin:0 20px;}
+/*header icons end here*/
+/*image header start here*/
+.imageheader .text1 p{text-align:center;text-transform:uppercase;padding-top:200px;color:#fff;}
+
+ .imageheader .text2 p{text-align:center;font-size:50px;text-transform:uppercase;margin-top:30px;color:#fff;letter-spacing:5px;}
+
+.imageheader .formdiv {margin-top:30px;margin-left:250px;margin-bottom:0;overflow:auto;}
+
+.imageheader .formdiv form input{padding-left:0;padding-right:0;height:30px;margin:0 5px;text-align:center;background:url("../images/banner.jpg") ;background-repeat:no-repeat;border:1px solid lightgrey;border-radius:4px 4px 4px 4px;color:#fff}
+
+::placeholder{color:lightgrey;opacity:1;}
+
+.searchbtn{height:35px;width:150px;background:red;color:white;text-transform:uppercase;border:none;border-radius:8px 8px 8px 8px;}
+
+.searchbtn a{text-decoration:none;color:white;}
+
+.imageheader{background:url("../images/banner.jpg") ;background-repeat:no-repeat;height:600px;background-size:cover;}
+
+/*image header end here*/
+/*header start here*/
+.headerlist{background:black;position:relative;left:0;right:0;top:-600px;}
+
+.subheaderlist{color:#fff;padding:20px 0;width:1100px;margin:0 auto;}
+
+.subheaderlist .active1 a:hover{border-bottom:3px solid white;padding-bottom:10px;}
+
+.subheaderlist .active a{border-bottom:3px solid white;padding-bottom:10px;}
+
+.subheaderlist .active1 a:hover .active a{border-bottom:3px solid black;padding-bottom:10px;}
+
+.subheaderlist .clr{clear:both;display:inline-block;}
+
+.travelimg {text-transform:uppercase;display:inline-block;}
+
+.travelimg span img{width:20px;height:20px;}
+
+.travelimg span{padding:0 3px;overflow:auto;}
+
+.listoption {float:right;margin-top:7px;}
+
+.listoption li{float:left;list-style:none;padding:0 10px;font-size:12px;}
+
+.listoption li:first-child{padding-left:0;}
+
+.listoption li:last-child{padding-right:0;}
+
+.listoption li a{text-decoration:none;color:#fff;text-transform:uppercase;}
+/*header ends here*/
+
+.textnote1{margin-top:80px;}
+
+.textnote2{margin-top:40px;}
+
+.textnote1 p{text-transform:uppercase;text-align:center;font-weight:bold;font-size:26px;}
+
+/*.textnote1 p.active{border-bottom:5px solid red;}*/
+.t1 p{color:red;font-size:26px;font-weight:bold}
+.t11{margin-top:140px;position:relative;}
+.t11::after{content:"";height:5px;width:16%;position:absolute;left:42%;right:0;bottom:0;top:100%;background:red;}
+.textnote2 p{text-transform:uppercase;text-align:center;font-size:40px;}
+.textnote2 p{text-transform:uppercase;text-align:center;}
+.t2{margin-top:60px;margin-bottom:60px;}
+/*main grid start here*/
+.main-grid{margin:0 auto;width:1100px;}
+/*grid images divided into 4 parts*/
+.gridBox{width:215px;height:400px;background:#fff;margin:30px;display:inline-block;margin-top:60px;float:left;}
+.gridBox img{display:inline-block}
+.prodInfo{margin-top:15px;}
+.prodInfo p{margin:0;padding:0}
+.prodPrice{ font-size:14px; font-weight:bold;line-height:30px;}
+.prodDesc{ font-size:12px;margin-top:5px;color:lightgrey;line-height:30px;}
+.prodDescOffer{font-size:16px;margin-top:5px;font-weight:bold;line-height:30px;}
+.prodOff{font-size:12px;margin-top:5px;color:lightgrey;line-height:30px;}
+.prodInfo b{color:red;}
+.btnBook{font-size:12px; background:red;text-decoration:none; text-transform:uppercase;color:#fff; padding:10px; text-align:center;line-height:100px;margin-bottom:0;}
+.btnBook:hover{background:black;}
+.gridBox .btn1:hover{background:black;}
+.btn2 {height:40px;width:40px;background:white;color:black;font-size:36px;border:2px solid lightgrey;position:absolute;}
+.btn2  a{text-decoration:none;color:black;}
+.btndiv{margin-top:-80px;margin-left:-60px;}
+.btn2:hover{background:yellow;}
+.btn3:hover{background:yellow;}
+.btn3 {height:40px;width:40px;background:white;color:black;font-size:36px;border:2px solid lightgrey;position:absolute;text-align:center;}
+.btn3  a{text-decoration:none;color:black;}
+.btndiv1{margin-top:-55px;margin-left:235px;}
+.gridBox .btn1{font-size:12px; background:red;text-decoration:none; text-transform:uppercase;color:#fff; text-align:center;line-height:160px;}
+.clr{clear:both;}
+.prodInfo1{margin-top:15px;float:left;margin:30px;width:92px;}
+.gridBox1:first-child{margin-left:0;}
+.gridBox1:last-child{margin-right:0;}
+.prodInfo1  .prodPrice{ font-size:14px; font-weight:bold;line-height:30px;}
+.prodInfo1  .prodDesc{ font-size:12px;margin-top:5px;color:lightgrey;line-height:30px;}
+.prodInfo1  .prodDescOffer{font-size:12px;margin-top:5px;line-height:30px;}
+.prodInfo1 b{color:red;}
+.gridBox1 img{display:inline-block}
+.gridBox1{width:304px;height:1100px;background:#fff;display:inline-block;margin-top:60px;overflow:hidden;margin:30px}
+/* grid iamges end here*/
+.main-grid1{margin:0 auto;width:1100px;margin-top:60px;margin-left:85px;}
+/*main grid end here*/
+.p2 p{text-transform:uppercase;text-align:center;font-size:30px;color:white;padding-bottom:0px}
+.p1 p{text-transform:uppercase;text-align:center;color:white;font-size:16px;padding-top:70px;}
+ .emailform {margin-top:30px;margin-left:250px;}
+ .imagesubscribe{background:url("../images/aeroplaneicon2.jpg") ;background-repeat:no-repeat;height:400px;background-size:cover;}
+ .imagesubscribe .emailform form input{padding-left:0;width:450px;padding-right:0;height:50px;margin:0 10px;text-align:center;}
+ .subscribebtn{height:50px;width:150px;background:red;color:white;text-transform:uppercase;border:none;border-radius:10px 10px 10px 10px;}
+.subscribebtn  a{text-decoration:none;color:white;}
+.imagesubscribe  ::placeholder{color:black;opacity:1;}
+/*container start here*/
+.lastcontainer{margin:0 auto;width:1100px;}
+.contgrids{height:250px;background:#fff;display:inline-block;overflow:hidden;margin:10px}
+.contgrids .contgrid1 {width:215px;float:left;margin:0 30px;}
+.contgrids .contgrid1 p{color:lightgrey;}
+.contgrids .contgrid1 p b{color:black;}
+.contgrids .contgrid1{line-height:40px;}
+.contgrids .contgrid2{width:215px;float:left;margin:0 30px;}
+.contgrids .contgrid3{width:215px;float:left;margin:0 30px;}
+.contgrids .contgrid2{line-height:40px;}
+.contgrids .contgrid2 a{text-decoration:none;color:lightgrey;padding:10px 0;background:white;width:30px;border:1px solid lightgrey;border-radius:5px 5px 5px 5px;}
+.contgrids .contgrid4{width:195px;float:left;margin:0 30px;overflow:hidden;display:inline-block;}
+.prodInfo2  .prodPrice1{ font-size:12px;color:lightgrey;}
+.prodInfo2  .prodDesc1{ font-size:12px;color:lightgrey;margin-left:11px;}
+.prodInfo2 .prodPrice1{margin-top:16px;margin-left:11px;}
+.pinfo1 img{margin-top:6px;} 
+.prodInfo2{float:left;}
+/*container end here*/
+/*.contgrids .contgrid1{width:215px;}
+ .contgrids .contgrid1{width:215px;}*/
+
+ /*footer start here*/
+ .footer{background:black;margin:0 auto;left:0;right:0;width:1100px}
+ .subfooterlist{color:#fff;padding:20px 0;width:1000px;margin:0 auto;}
+  .footer span{overflow:auto;}
+  .footerlastelement{float:right;}
+  .footerlastelement img{height:12px;width:12px;}
+  .footerlastelement span{padding:0 7px;}
+  .twit{margin-top:15px;}
+  .twit span{overflow:auto;}
+.offermaingrid{margin:0 auto;width:1100px;height:450px;}
+.imgcontent{margin-top:20px;}
+.imgcontent span p{line-height:40px;}
+.imgcontent span p b{color:red;line-height:60px;}
+.offergrid{width:306px;overflow:hidden;float:left;margin:30px;}
+.btnBook1{font-size:18px; background:red;text-decoration:none; text-transform:uppercase;color:#fff; text-align:center;}
+.btnBook1:hover{background:black;}
+.imgcontent span{float:left;padding:0 7px;} 
+/*footer end here*/
+
+#mlayer
+{
+	height:100%;
+	width:100%;
+	display:none;
+	position:fixed;
+	bottom:0;
+	right:0;
+	opacity:0.7;
+	z-index:9001;
+	background:black;
+}
+
+/*form part css start here*/
+
+
+
+* {
+  font-family: 'Open Sans', sans-serif;margin:0;padding:0;
+}
+
+body {
+  background: white;
+}
+
+.signupSection {
+  z-index: 9002;
+	width: 600px;
+	display: none;
+	position: fixed;
+	top:100px;;
+	left:0;
+	right:0;
+	background-color: white;
+	color: black;
+	overflow: auto;
+    height: 800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+hr
+{
+	height:5px;
+	background:black;
+}
+
+  h2 {
+    padding-top: 10px;
+    font-weight: bold;
+	text-align:center;
+  }
+  p {
+    font-size: 18px;
+  }
+  
+
+#signupForm
+{
+	height:1100px;
+}
+.signupForm {
+  padding: 30px 0;
+  background:cyan;
+  color:black;
+  h2 {
+    font-weight: 300;
+  }
+}
+
+
+::placeholder
+{
+	color:black;
+}
+
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color:black;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+#output
+{
+	color:black;
+	font-size:16px;
+	background:cyan;
+}
+#leftbtn,#rightbtn,#loginbtn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+  &:hover {
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 80px;
+  }
+}
+
+i
+{
+color:red;
+font-size:20px;
+}
+
+#output h1
+{
+	text-align:center;
+	color:green;
+}
+
+#login h1
+{
+	text-align:center;
+	color:green;
+}
+
+#signupForm a,#logininfo a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    display: block;
+    padding: 0 20px;
+    font-size:30px;
+    background: red;
+    height: 30px;  
+	
+  }
+
+#loginsection
+{
+	z-index: 9003;
+	width: 600px;
+	display: none;
+	position: fixed;
+	top:50px;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color: white;
+	color: black;
+	margin:auto;
+	overflow: auto;
+    height: 479px;
+}
+#logininfo
+{
+	
+}
+/*form css end here*/

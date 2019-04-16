@@ -1,0 +1,570 @@
+var obj=new JqueryForm();
+/*object function start here*/
+function JqueryForm()
+{	this.isEmpty=isEmpty;
+	this.restrictAlphabets=restrictAlphabets;
+	this.restrictNumbers=restrictNumbers;
+	this.nameRegex=nameRegex;
+	this.firstNameValidate=firstNameValidate;
+	this.lastNameValidate=lastNameValidate;
+	this.passwordValidate=passwordValidate;
+	this.confirmPassword=confirmPassword;
+	this.emailValidate=emailValidate;
+	this.dateValidate=dateValidate;
+	this.contactValidate=contactValidate;
+	this.pincodeValidate=pincodeValidate;
+	this.genderValidation=genderValidation;
+	this.hobbiesValidation=hobbiesValidation;
+	this.cityValidate=cityValidate;
+	this.resetData=resetData;
+	this.displayResult=displayResult;
+	this.showResult=showResult;
+	this.loginResult=loginResult;
+	this.firstNameValidatelog=firstNameValidatelog;
+	this.passwordValidatelog=passwordValidatelog;
+	//this.hideForm=hideForm;
+	//this.clearBg=clearBg;
+	//this.timeout=timeout;
+	
+
+	/*empty,null,undefined checking start here*/
+	function isEmpty(val)
+	{	if(val!="" && val!=undefined && val!=null)
+		{	return true;
+		}
+		else
+		{	return false;
+		}
+	}
+	/*empty,null,undefined checking end here*/
+	/*alphabet restricted start here*/
+	function restrictAlphabets(e)
+	{
+		var x=e.which||e.keycode;
+		if((x>=48 && x<=57) || x==8 ||
+			(x>=35 && x<=40) || x==47)
+			return true;
+		else
+			return false;
+	}
+	/*alphabet restricted end here*/
+	/*number restricted start here*/
+	function restrictNumbers(e)
+	{
+		var x=e.which||e.keycode;
+		if((x>=48 && x<=57) || x==8 ||
+			(x>=35 && x<=40)|| x==46)
+			return false;
+		else
+			return true;
+	}
+	/*number restricted end here*/
+	/*regex validation for name start here*/
+	function nameRegex(x)
+	{
+			var regname=/^[a-zA-Z]{2,12}$/;
+			var result=regname.test(x);
+			return result;
+	}
+	/*regex validation for name end here*/
+	/*first name validation start here*/
+	function firstNameValidate()
+	{
+		var name=$("#firstname").val();
+		var resname=isEmpty(name);
+		if(!resname)
+		{
+			$("#fnameerror").text("first name cannot be empty");
+			$("#fnameerror").css("color","red");
+			return false;
+		}
+		else if(nameRegex(name))
+		{
+			$("#fnameerror").text("");
+			//$("#fnameerror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#fnameerror").text("min 3-11 character allowed");
+			$("#fnameerror").css("color","red");
+			return false;
+		}	
+	
+	}
+	/*first name validation end here*/
+	/*last name validation start here*/
+	function lastNameValidate()
+	{
+		var name=$("#lastname").val();
+		var resname=isEmpty(name);
+		if(!resname)
+		{
+			$("#lnameerror").text("last name cannot be empty");
+			$("#lnameerror").css("color","red");
+			return false;
+		}
+		else if(nameRegex(name))
+		{
+			$("#lnameerror").text("");
+			//$("#lnameerror").css("color","green");
+			return true;
+		}
+		else
+		{
+			$("#lnameerror").text("min 3-11 character allowed");
+			$("#lnameerror").css("color","red");
+			return false;
+		}	
+	
+	}
+	/*last name validation start here*/
+	/*password validation start here*/
+	function passwordValidate()
+	{
+		var passwrd=$("#password").val();
+		var passpattern=/^[A-Z]{1}[a-z]{4,}[./@_]{1}[0-9]{2,}$/;
+		var resname=isEmpty(passwrd);
+		if(!resname)
+		{
+			$("#passworderror").text("password cannot be empty");
+			$("#passworderror").css("color","red");
+			return false;
+		}
+		else if(passpattern.test(passwrd))
+		{
+			$("#passworderror").text("");
+			//$("#passworderror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#passworderror").text("invalid password");
+			$("#passworderror").css("color","red");
+			return false;
+		}
+	
+	}
+	/*password validation end here*/
+	/*confirmpassword validation start here*/
+	function confirmPassword()
+	{
+		var conpasswrd=$("#confirmpass").val();
+		var passwrd=$("#password").val();
+		var resname=isEmpty(conpasswrd);
+		if(!resname)
+		{
+			$("#confirmerror").text("password cannot be empty");
+			$("#confirmerror").css("color","red");
+			return false;
+		}
+		else if(conpasswrd==passwrd)
+		{
+			$("#confirmerror").text("password match Successfully!!!!");
+			$("#confirmerror").css("color","green");
+			return true;
+		}
+		else
+		{
+			$("#confirmerror").text("password not matched");
+			$("#confirmerror").css("color","red");
+			return false;
+		}
+	}
+	/*confirmpassword validation end here*/
+	/*email validation start here*/
+	function emailValidate()
+	{
+		var email=$("#email").val();
+		var emailpattern= /^([^.])([a-z0-9]+[\.]{0,1})*[\_]{0,1}[a-zA-Z0-9]+@[a-z0-9]{4,}\.([com]{3}|[gov]{3}\.[in]{2}|[co]{2}\.[in]{2})/;
+		var resname=isEmpty(email);
+		if(!resname)
+		{
+			$("#emailerror").text("email cannot be empty");
+			$("#emailerror").css("color","red");
+			return false;
+		}
+		else if(emailpattern.test(email))
+		{
+			$("#emailerror").text("");
+			//$("#emailerror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#emailerror").text("invalid email id");
+			$("#emailerror").css("color","red");
+			return false;
+		}
+	
+	}
+	/*email validation end here*/
+	/*date validation start here*/
+	function dateValidate()
+	{
+		var dates=$("#date").val();
+		var datepattern=/^([0][1-9]|[1][0-9]|[2][0-9]|[3][0-1])[\/]([0][1-9]|[1][0-2])[\/]([1][9][0-9][0-9]|[2][0][0-1][0-9])$/;
+		var resname=isEmpty(dates);
+		if(!resname)
+		{
+			$("#dateerror").text("date cannot be empty");
+			$("#dateerror").css("color","red");
+			return false;
+		}
+		else if(datepattern.test(dates))
+		{
+			$("#dateerror").text("");
+			//$("#dateerror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#dateerror").text("invalid date");
+			$("#dateerror").css("color","red");
+			return false;
+		}
+	}
+	/*date validation end here*/
+	/*contact validation start here*/
+	function contactValidate()
+	{
+		var contact=$("#contact").val();
+		var contactpattern=/^[789]{1}[0-9]{9}$/;
+		var resname=isEmpty(contact);
+		if(!resname)
+		{
+			$("#contacterror").text("contact cannot be empty");
+			$("#contacterror").css("color","red");
+			return false;
+		}
+		else if(contactpattern.test(contact))
+		{
+			$("#contacterror").text("");
+			//$("#contacterror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#contacterror").text("invalid contact");
+			$("#contacterror").css("color","red");
+			return false;
+		}
+	}
+	/*contact validation end here*/
+	/*pincode validation start here*/
+	function pincodeValidate()
+	{
+		var pincode=$("#pincode").val();
+		var pincodepattern=/[0-9]{6}/;
+		var resname=isEmpty(pincode);
+		if(!resname)
+		{
+			$("#pincodeerror").text("pincode cannot be empty");
+			$("#pincodeerror").css("color","red");
+			return false;
+		}
+		else if(pincodepattern.test(pincode))
+		{
+			$("#pincodeerror").text("");
+			//$("#pincodeerror").css("color","green");
+			return true;
+		}
+		else
+		{
+			$("#pincodeerror").text("invalid pincode");
+			$("#pincodeerror").css("color","red");
+			return false;
+		}
+	
+	}
+	/*pincode validation end here*/
+	/*Gender validation start here*/
+	function genderValidation()
+	{
+		var gender = $("input[name='gender']:checked").val();
+		if(gender!="" && gender!=undefined)
+		{
+		$("#displaygender").text("");
+		return true;
+		}
+		else
+		{
+		$("#displaygender").text("**Required !");
+		$("#displaygender").css("color","red");
+		return false;
+		}
+	}
+	/*Gender validation end here*/
+	/*Hobbies validation start here*/
+	function hobbiesValidation()
+	{
+		var hobi = $("input[name='hobbies']:checked");
+		var hobiarray="";
+		for(var x=0; x<hobi.length;x++)
+		{
+		if(hobi[x].checked)
+		{
+		hobiarray += hobi[x].value+ " ";
+		}
+		}
+		var result=hobiarray;
+		if(isEmpty(result))
+		{
+			$("#displayhobbies").text("");
+			return true;
+		}
+		else
+		{
+			$("#displayhobbies").text("**Required !");
+			$("#displayhobbies").css("color","red");
+			return false;
+		}
+	}
+	/*Hobbies validation end here*/
+	/*city validation start here*/
+	function cityValidate()
+	{
+		var selectcity=$("#city option:selected").val();
+		if(selectcity!="")
+		{
+		$("#displaycity").text("");
+		return true;
+		}
+		else
+		{
+		$("#displaycity").text("**Required !");
+		$("#displaycity").css("color","red");
+		return false;
+		}
+	}
+
+	/*city validation end here*/
+	/*reset logic start here*/
+	function resetData()
+	{
+		$("#fnameerror").text("");
+		$("#displaycity").text("");
+		$("#displayhobbies").text("");
+		$("#displaygender").text("");
+		$("#pincodeerror").text("");
+		$("#contacterror").text("");
+		$("#dateerror").text("");
+		$("#emailerror").text("");
+		$("#confirmerror").text("");
+		$("#passworderror").text("");
+		$("#lnameerror").text("");
+		$("#fnameerror").text("");
+	}
+
+	/*reset logic start here*/
+
+	/*display result start here*/
+	function displayResult()
+	{
+		if(firstNameValidate() && lastNameValidate() && passwordValidate() &&
+			dateValidate() && emailValidate() && contactValidate() && 
+			pincodeValidate() && genderValidation() && hobbiesValidation() && cityValidate() )
+		{
+			/*var email=$("#email").val();
+			var name=$("#firstname").val();
+			var lname=$("#lastname").val();
+			var dates=$("#date").val();
+			var contact=$("#contact").val();
+			var pincode=$("#pincode").val();
+			var passwrd=$("#password").val();
+			var gender = $("input[name='gender']:checked").val();
+			var selectcity=$("#city option:selected").val();
+			var hobi = $("input[name='hobbies']:checked").val();
+			var hobiarray="";
+			for(var x=0; x<hobi.length;x++)
+			{
+			if(hobi[x].checked)
+			{
+			hobiarray += hobi[x].value+ " ";
+			}
+			}*/
+			//$("#output").html("<b>"+email+"<br>"+name+"<br>"+lname+"<br>"+dates+"<br>"+contact+"<br>"+pincode+"<br>"+gender+"<br>"+hobiarray+"<br>"+selectcity+"</b>");
+			$("#output").html("<h1>Successfully</h1>");
+			//$("#output").css("color","green");
+			var email=$("#email").val("");
+			var name=$("#firstname").val("");
+			var lname=$("#lastname").val("");
+			var dates=$("#date").val("");
+			var contact=$("#contact").val("");
+			var pincode=$("#pincode").val("");
+			var passwrd=$("#password").val("");
+			var gender = $("input[name='gender']:checked").prop("checked",false);
+			var conpasswrd=$("#confirmpass").val("");
+			var hobby = $("input[name='hobbies']:checked").prop("checked",false);
+			var selectcity=$("#city option:selected").prop("selected",false);
+			$("#confirmerror").val("");
+			obj.resetData();
+			setTimeout(function()
+			{
+			//$("#signupSection1").hide();
+			$("#output").hide();
+			$("#signupSection1").css("display",'none');
+			$("#mlayer").css("display",'none');
+			},5000);
+			return false;
+			
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	function firstNameValidatelog()
+	{
+		var email=$("#firstname_log").val();
+		var emailpattern= /^([^.])([a-z0-9]+[\.]{0,1})*[\_]{0,1}[a-zA-Z0-9]+@[a-z0-9]{4,}\.([com]{3}|[gov]{3}\.[in]{2}|[co]{2}\.[in]{2})/;
+		var resname=isEmpty(email);
+		if(!resname)
+		{
+			$("#fnameerror_log").text("email cannot be empty");
+			$("#fnameerror_log").css("color","red");
+			return false;
+		}
+		else if(emailpattern.test(email))
+		{
+			$("#fnameerror_log").text("");
+			//$("#emailerror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#fnameerror_log").text("invalid email id");
+			$("#fnameerror_log").css("color","red");
+			return false;
+		}
+		
+	
+	}
+	
+	function passwordValidatelog()
+	{
+		var passwrd=$("#password_log").val();
+		var passpattern=/^[A-Z]{1}[a-z]{4,}[./@_]{1}[0-9]{2,}$/;
+		var resname=isEmpty(passwrd);
+		if(!resname)
+		{
+			$("#passworderror_log").text("password cannot be empty");
+			$("#passworderror_log").css("color","red");
+			return false;
+		}
+		else if(passpattern.test(passwrd))
+		{
+			$("#passworderror_log").text("");
+			//$("#passworderror").css("color","green");*/
+			return true;
+		}
+		else
+		{
+			$("#passworderror_log").text("invalid password");
+			$("#passworderror_log").css("color","red");
+			return false;
+		}
+		
+	
+	}
+	function loginResult()
+	{
+		if(firstNameValidatelog() && passwordValidatelog())
+		{
+			$("#loginop").html("<marquee><h1>Successfully Login</h1></marquee>");
+			var email=$("#firstname_log").val("");
+			var passwrd=$("#password_log").val("");
+			$("#fnameerror_log").text("");
+			$("#passworderror_log").text("");
+			setTimeout(function()
+			{
+			//$("#loginsection").hide();
+			$("#loginop").hide();
+			$("#loginsection").css("display",'none');
+			$("#mlayer").css("display",'none');
+			},5000);
+			return false;
+		}
+		else
+		{
+		
+		return false;
+		}
+	}
+	/*display result end here*/
+	/*Final display result start here*/
+	function showResult()
+	{
+		$("#firstname").blur(firstNameValidate);
+		$("#firstname").keypress(restrictNumbers);
+		$("#lastname").blur(lastNameValidate);
+		$("#lastname").keypress(restrictNumbers);
+		$("#password").blur(passwordValidate);
+		$("#confirmpass").blur(confirmPassword);
+		$("#email").blur(emailValidate);
+		$("#date").blur(dateValidate);
+		$("#date").keypress(restrictAlphabets);
+		$("#contact").blur(contactValidate);
+		$("#contact").keypress(restrictAlphabets);
+		$("#pincode").blur(pincodeValidate);
+		$("#pincode").keypress(restrictAlphabets);
+		$("#signupForm").submit(displayResult);
+		$("#rightbtn").click(resetData);
+		$("#loginbtn").click(loginResult);
+		//$("#loginbtn").click(resetData);
+	
+	}	
+}
+/*object function end here*/
+	/*document loaded*/
+$(document).ready(function()
+{		obj.showResult();
+});
+	/*document unloaded*/
+
+
+
+
+			function hide() 
+				{
+				document.getElementById("signupSection1").style.display = 'none';
+				document.getElementById("mlayer").style.display = 'none';
+				document.getElementById("loginsection").style.display = 'none';
+				}
+			//To detect escape button
+			document.onkeydown = function(evt) {
+				evt = evt || window.event;
+				if (evt.keyCode == 27) {
+					hide();
+				}
+			}
+		
+			function showpopup()
+				{
+			document.getElementById("mlayer").style.display="block";
+			document.getElementById("signupSection1").style.display = 'block';
+			var email=$("#email").val("");
+			var name=$("#firstname").val("");
+			var lname=$("#lastname").val("");
+			var dates=$("#date").val("");
+			var contact=$("#contact").val("");
+			var pincode=$("#pincode").val("");
+			var passwrd=$("#password").val("");
+			var gender = $("input[name='gender']:checked").prop("checked",false);
+			var conpasswrd=$("#confirmpass").val("");
+			var hobby = $("input[name='hobbies']:checked").prop("checked",false);
+			var selectcity=$("#city option:selected").prop("selected",false);
+			$("#confirmerror").text("");
+			obj.resetData();
+				}
+			function showloginpopup()
+				{	
+			document.getElementById("mlayer").style.display="block";
+			document.getElementById("loginsection").style.display = 'block';
+			var email=$("#firstname_log").val("");
+			var passwrd=$("#password_log").val("");
+			$("#fnameerror_log").text("");
+			$("#passworderror_log").text("");
+				}
+	

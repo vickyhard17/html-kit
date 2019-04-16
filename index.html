@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+<title>Flights Booking</title>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>			
+</head>
+<body>
+<!--wrapper start here-->
+<div class="wrapper wrapper-1" id="wrap">
+<!--Header start here-->
+	<div class="main-header">
+<!--header lefticon start here-->
+		<div class="iconsleft">
+			<ul class="headerleft-icon">
+				<li class="list1"><a href="#"><img src="images/callicon.png"></img></a><span>CONTACT WITH US</span></li>	
+				<li class="list1"><a href="#"><img src="images/gmailicon.png"></img></a><span>EMAIL-US:shubham.singh@naaptol.com</span></li>	
+			</ul>
+		</div>
+	<!--header lefticon end here-->
+		<!--header righticon start here-->
+		<div class="iconsright">
+			<ul class="headerright-icon">
+				<li class="list2"><a href="#"><img src="images/carticon.png"></img></a><span>cart</span></li>	
+				<li class="list2"><a href="#"><img src="images/searchicon.png"></img></a><span>search</span></li>	
+				<li class="list2"><a href="#" onclick="showpopup();" class="js-open-modal" id="signup"><img src="images/loginlogo.jpg"><span>Signup</span></img></a></li>
+				<li class="list2"><a href="#" onclick="showloginpopup();"><img src="images/signuplogo.jpg"><span>Login</span></img></a></li>
+			</ul>
+		</div>
+		<!--heade righticon end here-->
+	</div>
+	<!--image header start here-->
+	<div class="imageheader">
+		<div class="text1"><p>over 90 000 flights of your choice</p></div>	
+		<div class="text2"><p>choose flights</p></div>
+		<div class="formdiv">
+			<form>
+				<input type="text" placeholder="Enter a destination">
+				<input type="text" placeholder="Check in">
+				<input type="text" placeholder="Check out">
+				<button class="searchbtn"><a href="#">search now</a></button>
+			</form>
+		</div>
+	</div>
+	<!--image header end here-->
+	<!--header list start here-->
+	<div class="headerlist">
+		<div class="subheaderlist">
+			<div class="travelimg">
+				<span>let's<span><span><img src="images/travelicon.png"></img></span><span>travel</span>	
+			</div>
+			<div class="listoption">
+				<ul class="ulist">
+					<li class="active"><a href="#">sea tours</a></li>
+					<li class="active1"><a href="#">helpful</a></li>
+					<li class="active1"><a href="#">subscribe</a></li>
+					<li class="active1"><a href="#">services</a></li>
+					<li class="active1"><a href="#">gallery</a></li>
+					<li class="active1"><a href="#">ourteam</a></li>
+					<li class="active1"><a href="#">testimonials</a></li>
+					<li class="active1"><a href="#">news</a></li>
+					<li class="active1"><a href="#">contact</a></li>
+				</ul>
+			</div>
+			<div class="clr"></div>
+		</div><!--header list end here-->
+	</div><!--header end here-->
+	<div class="textnote1"><p class="active">popular<p></div>
+	<div class="textnote2"><p><b>most popular flights</b><p></div>
+<!--grid container start here-->
+	<div class="main-grid">
+	<!--grids of images start here-->
+	<div class="gridBox">
+    	<img src="images/aeroplaneicon.png" alt="Title" title="Title" width="215" height="185" class="prodImg">
+    		<div class="prodInfo">
+        		<p class="prodPrice">FROM <b>$60</b> / PERSON</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer">CHEAP FLIGHTS TO PARIS</p>
+				<p class="prodOff">BOOM NOW AND <b>SAVE 30%</b></p>
+			</div>
+			<div>
+        	<a href="#" class="btnBook btn1">book now</a>
+			</div>
+			<div class="btndiv">
+        	<button class="btn2"><b> < </a><button>
+			</div>
+	</div>
+	<div class="gridBox">
+    	<img src="images/aeroplaneicon1.png" alt="Title" title="Title" width="215" height="185" class="prodImg">
+    		<div class="prodInfo">
+        		<p class="prodPrice">FROM <b>$60</b> / PERSON</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer">CHEAP FLIGHTS TO LONDON</p>
+				<p class="prodOff">BOOM NOW AND <b>SAVE 30%</b></p>
+			</div>
+			<div>
+        	<a href="#" class="btnBook">book now</a>
+			</div>
+	</div>
+	<div class="gridBox">
+    	<img src="images/aeroplaneicon2.jpg" alt="Title" title="Title" width="215" height="185" class="prodImg">
+    		<div class="prodInfo">
+        		<p class="prodPrice">FROM <b>$60</b> / PERSON</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer">CHEAP FLIGHTS TO MONACO</p>
+				<p class="prodOff">BOOM NOW AND <b>SAVE 30%</b></p>
+			</div>
+			<div>
+        	<a href="#" class="btnBook">book now</a>
+			</div>
+	</div>
+	<div class="gridBox">
+    	<img src="images/aeroplaneicon2.jpg" alt="Title" title="Title" width="215" height="185" class="prodImg">
+    		<div class="prodInfo">
+        		<p class="prodPrice">FROM <b>$60</b> / PERSON</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer">CHEAP FLIGHTS TO NEW ZEALAND</p>
+				<p class="prodOff">BOOM NOW AND <b>SAVE 30%</b></p>
+			</div>
+			<div>
+        	<a href="#" class="btnBook">book now</a>
+			</div>
+			<div class="btndiv1">
+        	<button class="btn3"><b> > </a><button>
+			</div>
+	</div>
+	<!--grids of images end here-->
+	<div class="clr"></div>
+    </div>
+<!--grid container end here-->
+<div class="textnote1 t1 t11"><p class="active">best flights<p></div>
+	<div class="textnote2 t2"><p><b>best flights this months</b><p></div>
+<!--subgrids container of images start here-->
+	<div class="main-grid1">
+	<!--subgrids of images start here-->
+	<div class="gridBox1 box1">
+    	<img src="images/places1.jpg" alt="Title" title="Title" width="340" height="310" class="prodImg">
+	<div class="prodInfo1"><img src="images/logo1.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo2.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo3.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	</div>
+	<div class="gridBox1 box2">
+    	<img src="images/places1.jpg" alt="Title" title="Title" width="340" height="310" class="prodImg">
+	<div class="prodInfo1"><img src="images/logo1.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo2.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo3.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	</div>
+	<div class="gridBox1 box3">
+    	<img src="images/places1.jpg" alt="Title" title="Title" width="340" height="310" class="prodImg">
+	<div class="prodInfo1"><img src="images/logo1.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo2.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	<div class="prodInfo1"><img src="images/logo3.png" alt="Title" title="Title" width="60" height="60"></div>
+	<div class="prodInfo1">
+        		<p class="prodPrice">FLY LONDON TO PARIS</p>
+				<p class="prodDesc">ONE WAY FLIGHTS</p>
+				<p class="prodDescOffer"><strike>$470</strike> <b>$300</b></p>
+	</div>
+	</div>
+	<!--grids of images end here-->
+	</div>
+	<!--subgrids container ofimages end here-->
+	<div class="imagesubscribe">
+		<div class="p1"><p class="active">subscribe<p></div>
+	<div class= "p2"><p><b>lets subscribe</b><p></div>
+	<div class="emailform">
+			<form>
+				<input type="email" placeholder="Enter your email">
+				<button class="subscribebtn"><a href="#">subscribe</a></button>
+			</form>
+		</div>
+	</div>
+	<div class="textnote1 t1 t11"><p class="active">best flights<p></div>
+	<div class="textnote2 t2"><p><b>best flights this months</b><p></div>
+	<!--offergrids of container images start here-->
+	<div class="offermaingrid">
+	<!--offergrids of images start here-->
+		<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>	
+		<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>	<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>	
+			<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>		<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>		<div class="offergrid">
+				<img src="images/offerimg.png" alt="image not found" height="285" width="304">
+					<div class="imgcontent">
+							<span><p>FLIGHTS TO FRANCE</p>
+							<p>FROM <b>$860</b> / PERSON</p></span>
+							<span>
+        	<a href="#" class="btnBook1">book now</a>
+			</span>
+					</div>
+		</div>	
+		<!--offergrids of images end here-->
+	</div>
+	<!--offergrids of conatiner end start here-->
+<!--last container of images start here-->
+	<div class="lastcontainer">
+	<!--lastgrids of images start here-->
+		<div class="contgrids">
+			<div class="contgrid1">
+				<p><b>CONTACT US<b></p>
+				<p>phone:<b>7021274938</b></p>
+				<p>email:<b>shubham.singh@naaptol.com</b></p>
+				<p>address:<b>Sion,Mumbai</b></p>
+			</div>
+			<div class="contgrid2">
+				<p><b>Product Tags</b></p>
+				<div class="incontgrid2">
+					<a href="#">Flights</a>
+					<a href="#">Travelling</a>
+					<a href="#">Sale</a>
+					<a href="#">Illegal</a>
+					<a href="#">Travelling</a>
+					<a href="#">Illegal</a>
+				</div>
+			</div>
+			<div class="contgrid3">
+						<img src="images/royalimg.jpg" alt="Title" title="Title" width="215" height="185" class="prodImg">
+				</div>
+			<div class="contgrid4">
+				<p>TWITTER</p>
+				<div class="twit">
+				<div>
+				<span class="prodInfo2 pinfo1"><img src="images/twittericon.png" alt="Title" title="Title" width="30" height="30"></span>
+					<span class="prodInfo2 pinfo2">
+        				<p class="prodPrice1">FLY LONDON TO PARIS</p>
+						<p class="prodDesc1">ONE WAY FLIGHTS</p>
+					</span>
+				</div>
+				<div>
+						<span class="prodInfo2 pinfo1"><img src="images/twittericon.png" alt="Title" title="Title" width="30" height="30"></span>
+					<span class="prodInfo2 pinfo2">
+        				<p class="prodPrice1">FLY LONDON TO PARIS</p>
+						<p class="prodDesc1">ONE WAY FLIGHTS</p>
+					</span>
+				</div>
+				<div>
+						<span class="prodInfo2 pinfo1"><img src="images/twittericon.png" alt="Title" title="Title" width="30" height="30"></span>
+					<span class="prodInfo2 pinfo2">
+        				<p class="prodPrice1">FLY LONDON TO PARIS</p>
+						<p class="prodDesc1">ONE WAY FLIGHTS</p>
+					</span>
+				</div>
+				</div>
+				
+			</div>
+				
+		<!--last grids of images end here-->
+	</div>
+	<!--last container of images end here-->
+		<!--footer start here-->
+	<div class="footer">
+		<div class="subfooterlist">
+			<div class="travelimg">
+				<span>let's<span><span><img src="images/travelicon.png"></img></span><span>travel</span>	
+			</div>
+			<div class="footerlastelement">
+				<span><img src="images/copyrighticon.png"></img></span>All rights reserved LET'S TRAVEL
+			</div>
+		</div>
+	</div>
+	<div onclick="hide();" class="midlayer" id="mlayer"></div>
+	<!--footer end here-->
+	<div class="signupSection" id="signupSection1">
+<!--form start here-->
+		  <form action="#" method="POST"  id="signupForm" name="signupform" >
+		  <a href="#" class="js-close-modal" onclick="hide();">X</a>
+			<h2>Registration</h2><br>
+			<hr><br>
+			<ul class="noBullet">
+			  <b>FIrst Name:<i>*</i></b><li>
+				<label for="First name"></label>
+				<input type="text" class="inputFields" id="firstname" name="firstname" placeholder="Firstname" maxlength="15"/><span id="fnameerror"></span>
+			  </li>
+			  <b>Last Name:<i>*</i></b><li>
+				<label for="Last name"></label>
+				<input type="text" class="inputFields" id="lastname" name="lastname" placeholder="Lastname" maxlength="15"/>
+				<span id="lnameerror"></span>
+			  </li>
+			  <b>Choose Password:<i>*</i>(start with max 1 upper,min 4 lower,max 1 special @_. min 2 number)</b><li>
+				<label for="Choose password"></label>
+				<input type="password" class="inputFields" id="password" name="password" placeholder="Choose Password" maxlength="15" /><span id="passworderror"></span>
+			  </li>
+			  <b>Confirm Password:<i>*</i></b><li>
+				<label for="Confirm password"></label>
+				<input type="password" class="inputFields" id="confirmpass" name="confirmpass" placeholder="Confirm password" maxlength="15"/><span id="confirmerror"></span>
+			  </li>
+			   <b>Email:<i>*</i></b><li>
+				<label for="Email"></label>
+				<input type="text" class="inputFields" id="email" name="email" placeholder="Email"  />
+				<span id="emailerror"></span>
+			  </li>
+			   <b>DOB:<i>*</i>(date should be formatted like dd/mm/yyyy)</b><li>
+				<label for="Date"></label>
+				<input type="text" class="inputFields" id="date" name="date" placeholder="Date" maxlength="10"/>
+				<span id="dateerror"></span>
+			  </li>
+			   <b>Contact:<i>*</i></b><li>
+				<label for="Contact"></label>
+				<input type="text" class="inputFields" id="contact" name="contact" placeholder="Contact" maxlength="10"/>
+				<span id="contacterror"></span>
+			  </li>
+			  <b>Pincode:<i>*</i></b><li>
+				<label for="Pincode"></label>
+				<input type="text" class="inputFields" id="pincode" name="pincode" placeholder="Pincode" maxlength="6"/>
+				<span id="pincodeerror"></span>
+			  </li><br>
+			  <li>
+				<label for="Gender"><b>Gender:&nbsp;&nbsp;</b></label>
+				&nbsp;&nbsp;&nbsp;<input type="radio"  name="gender" value="male"/>&nbsp;&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;
+				<input type="radio"  name="gender" value="female"/>&nbsp;&nbsp;&nbsp;Female
+				<span id="displaygender"></span>
+			  </li><br><br>
+			  <li>
+				<label for="Hobbies"><b>Hobbies:&nbsp;&nbsp;</b></label>&nbsp;&nbsp;
+				<input type="checkbox"  name="hobbies" value="playing"/>&nbsp;&nbsp;&nbsp;Playing&nbsp;&nbsp;&nbsp;
+				<input type="checkbox"  name="hobbies" value="singing"/>&nbsp;&nbsp;&nbsp;Singing
+				<span id="displayhobbies"></span>
+			  </li><br><br>
+				<li><b>Select City:&nbsp;&nbsp;&nbsp;&nbsp;</b>
+					<select id="city">
+						<option value="">Select city</option>
+						<option name="city" value="Mumbai">Mumbai</option>
+						<option name="city" value="Bangalore">Bangalore</option>
+						<option name="city" value="Noida">Noida</option>
+						<option name="city" value="Pune">Pune</option>
+					</select><span id="displaycity"></span>
+				</li>
+			  
+			  <li>
+				<input type="submit" id="leftbtn" name="leftbtn" alt="leftbtn" value="Submit">
+				<input type="reset" id="rightbtn" name="rightbtn" alt="rightbtn" value="Cancel">
+			  </li>
+			  </li>
+			</ul>
+		  </form>
+		  
+<!--form end here-->
+<div id="output">
+ </div>
+</div>
+ 
+  <div id="loginsection">
+	<form action="#" method="POST" id="logininfo">
+	<a href="#" class="js-close-modal" onclick="hide();">X</a>
+		<h2>Login</h2><br>
+			<hr><br>
+			<ul class="noBullet">
+			  <b>Email:<i>*</i></b><li>
+				<label for="First name"></label>
+				<input type="text" class="inputFields" id="firstname_log" name="firstname" placeholder="Firstname" /><span id="fnameerror_log"></span>
+			  </li>
+			   <b>Password:<i>*</i>(start with max 1 upper,min 4 lower,max 1 special @_. min 2 number)</b><li>
+				<label for="Choose password"></label>
+				<input type="password" class="inputFields" id="password_log" name="password" placeholder="Choose Password" maxlength="15" /><span id="passworderror_log"></span>
+			  </li>
+			  <li>
+			  <input type="submit" id="loginbtn" name="leftbtn" alt="leftbtn" value="Submit">
+			  </li>
+			  </ul>
+	</form>
+	<div id="loginop"></div>
+  </div>
+
+ 
+	
+	
+</div>
+	<!--wrapper end here-->
+</body>
+</html>
